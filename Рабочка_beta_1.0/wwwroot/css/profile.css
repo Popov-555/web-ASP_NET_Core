@@ -1,0 +1,9 @@
+﻿.job-profile-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    border-radius: 10px;
+    width: calc(50%-10px);
+    background-color: #fff;
+}

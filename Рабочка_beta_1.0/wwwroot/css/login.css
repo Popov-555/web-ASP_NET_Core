@@ -1,0 +1,124 @@
+﻿/* Блок авторизации */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.auth-card {
+    width: 400px;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.auth-tab {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+
+    .auth-tab.active {
+        border-color: #4caf50;
+        font-weight: 600;
+    }
+
+.login-input {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+    .login-input:focus {
+        border-color: #8BC34A;
+        box-shadow: 0 0 5px rgba(139, 195, 74, 0.5);
+    }
+
+.login-error {
+    color: #e53935;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.job-button-auth {
+    font: 500 14px/100%;
+    min-width: 150px;
+    width: auto;
+    height: 40px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    white-space: nowrap;
+    border: 1px solid #4CAF4F;
+    border-radius: 5px;
+    background: #4CAF4F;
+    letter-spacing: 0.2px;
+}
+
+.job-button-login {
+    font: 500 14px/100%;
+    min-width: 120px;
+    width: auto;
+    height: 40px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 15px;
+    white-space: nowrap;
+    border: 1px solid #4CAF4F;
+    border-radius: 10px;
+    background: #4CAF4F;
+    letter-spacing: 0.2px;
+}
+
+.job-button-exit {
+    min-width: 120px;
+    width: auto;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF4F;
+    margin-right: 10px;
+    white-space: nowrap;
+    border: 1px solid #4CAF4F;
+    border-radius: 6px;
+    font-weight: 500;
+    background: white;
+}
+
+.job-button-auth:hover {
+    background-color: #2E7D31;
+}

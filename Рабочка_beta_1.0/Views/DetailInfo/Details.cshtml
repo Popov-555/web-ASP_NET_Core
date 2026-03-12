@@ -1,0 +1,39 @@
+﻿@model Job
+<div class="job-details">
+    <div class="job-details__header">
+        <h1 class="job-details__title">@Model.Title</h1>
+        <div class="job-details__salary">@Model.Salary ₽</div>
+    </div>
+    <div class="job-details__meta">
+        <div class="jobs-container__card-location">
+            <img src="~/fonts/Location.svg" class="jobs-container__card-location-icon">
+            <span class="jobs-container__card-location-text">@Model.Location</span>
+        </div>
+        <div class="jobs-container__card-location">
+            <img src="~/fonts/Location.svg" class="jobs-container__card-location-icon">
+            <span class="jobs-container__card-location-text">@Model.Category.Name</span>
+        </div>
+    </div>
+    
+    <div class="job-details__section">
+        <h3>Описание: </h3>
+        <p class="job-details__description">
+            @Model.Description
+        </p>
+    </div>
+    <div class="jobs-container-block">
+        <div class="jobs-container__card-date">
+            <img src="~/fonts/Calendar.svg" class="jobs-container__card-location-icon">
+            <span class="jobs-container__card-views-text">@Model.CreatedAt</span>
+            <div class="jobs-container__card-views">
+                <img src="~/fonts/Eye.svg" class="jobs-container__card-location-icon">
+                <span class="jobs-container__card-views-text">@Model.Views</span>
+            </div>
+        </div>
+        <div class="job-details__action">
+            <button id="respond-jobs" asp-controller="Profile" asp-action="ProfileAuth" class="job-button-login">
+                Откликнуться
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿@font-face {
+    font-family: "Euclid";
+    src: url("../fonts/EuclidCircularBLight/EuclidCircularBLight.eot?#iefix")format("embedded-opentype"), url("../fonts/EuclidCircularBLight/EuclidCircularBLight.woff") format("woff"), url("../fonts/EuclidCircularBLight/EuclidCircularBLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Caveat";
+    src: url("../fonts/Caveat-VariableFont_wght.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'champagne-limousines';
+    font-weight: 500;
+    src: url('../fonts/champagne-limousines.woff2') format('woff2');
+}

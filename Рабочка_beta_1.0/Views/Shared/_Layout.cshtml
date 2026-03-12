@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Подработка</title>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/font.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <ul class="header-container__list">
+                <li class="header-container__item">
+                    <a class="header-container__text" asp-area="" asp-controller="Home" asp-action="Index">Рабочка</a>
+                </li>
+            </ul>
+            @if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                <span class="header-container__text">@User.Identity.Name</span>
+                <!-- Форма для выхода -->
+                <form asp-controller="Auth" asp-action="Logout" method="post" class="d-inline">
+                    <button type="submit" class="job-button-exit">
+                        Выйти
+                    </button>
+                </form>
+            }
+            else
+            {
+                <form asp-controller="Auth" asp-action="Logout" method="post" class="d-inline">
+                    <button class="job-button-login" asp-controller="Auth" asp-action="Login">
+                        Войти
+                    </button>
+                </form>
+            }
+        </div>
+    </header>
+    <main role="main" class="main-content">
+        <div class="container-body">
+            @RenderBody()
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            &copy; 2026 - Рабочка - сервис поиска подработки в твоем городе  </a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

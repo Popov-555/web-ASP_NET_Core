@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Рабочка_beta_1.0.props" />
+</Project>
